@@ -1,0 +1,213 @@
+
+body {
+    //background-color:#999999;
+    font-family: "Signika Negative", sans-serif;
+    color: #999999;
+    margin: 0;
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    font-family: "Signika Negative", sans-serif;
+    color:  #26282B;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size:42px;
+}
+
+h2 {
+    font-size:24px;
+}
+
+h3 {
+    font-size:22px;
+}
+
+p{
+    line-height:22px;
+    margin-bottom:16px;
+}
+
+a {
+    color: #88ce02;
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 10px;
+}
+
+
+.wrapper {
+    position:absolute;
+    padding:20px;
+}
+
+.BubbleSortVisualisation{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    flex-wrap: nowrap;
+    height: 800px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.BubbleSortTrainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    flex-wrap: nowrap;
+    height: 800px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#BubbleAnimation{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 100%;
+    width: 70%;
+    background-color: #F8F9FB;
+    padding: 10px;
+    margin:0;
+    border-radius: 8px;
+}
+
+#BubblePractice{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    background-color: #F8F9FB;
+    padding: 10px;
+    margin:0;
+    border-radius: 8px;
+}
+
+section#BubbleAnimation div {
+    flex: 1 1 10%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 10%;
+    background-color: #AECBEB;
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+section#BubblePractice div {
+    flex: 1 1 10%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 10%;
+    background-color: #AECBEB;
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+nav {
+    text-align: left; }
+nav ul li {
+    list-style-type: none;
+    display: inline; }
+
+.codeWindow{
+    display: flex;
+    position: relative;
+    width: 30%;
+    background: #1b1b1b;
+    border-radius: 8px;
+}
+
+#shell{
+    width: 100%;
+    height: auto;
+}
+code[class*=language-], pre[class*=language-] {
+    color: #f8f8f2;
+    background: 0 0;
+    text-shadow: 0 1px rgb(0 0 0 / 30%);
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #FEA82F;
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 8px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
