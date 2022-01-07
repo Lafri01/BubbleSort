@@ -1,0 +1,176 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>myBubbleSort</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script>
+   $(document).ready(function (){
+     $(window).scroll(function() {
+       if ($(this).scrollTop()>10)
+       {
+         $('.scroller').fadeOut();
+       }
+       else
+       {
+         $('.scroller').fadeIn();
+       }
+     });
+   })
+  </script>
+</head>
+
+<body>
+  <div id="header"  >
+    <div id="headerinside" >
+      <div id="headerleft">
+        <a href="#titback"><img src="img/Zeichenfläche 1@2x.png" alt="Logo" style="height:40px"></a>
+      </div>
+      <nav id="nav">
+        <ul id="navlist">
+          <li class="navitem" id="Was"><a class="navlink1" href="#gradient"> <span>Test</span> </a></li>
+          <li class="navitem" id="Vornach"><a class="navlink1" href="#1_4">Vor & Nachteile</a></li>
+          <li class="navitem" id="funktitel"><a class="navlink1" href="#section_Funktion">Funktion</a></li>
+          <li class="navitem" id="Demo" ><a class="navlink1" href="#section_Demo">Übung</a></li>
+        </ul>
+      </nav>
+      <div id="headerright" >
+        <button onclick="showDropdown()" id="burger" class="burger"> <i id="bars" class="fas fa-bars" ></i> </button>
+        </div>
+      </div>
+    </div>
+
+  <div class="popup" id="popup">
+    <ul id="mobilenav">
+      <li class="navitem2" id="Was2"><a class="navlink2" href="#gradient"> <span>Test</span> </a></li>
+      <li class="navitem2" id="Vornach2"><a class="navlink2" href="#1_4">Vor & Nachteile</a></li>
+      <li class="navitem2" id="funktitel2"><a class="navlink2" href="#section_Funktion">Funktion</a></li>
+      <li class="navitem2" id="Demo2" ><a class="navlink2" href="#section_Demo">Übung</a></li>
+    </ul>
+  </div>
+
+  <div id="titback">
+    <div style="position: fixed; z-index: -1" id="Title">
+      <img src="img/Zeichenfläche 1@2x.png" alt="Logo" id="Logo">
+      <div id="Logotext"><h1>
+        <span class="text"></span>
+        <span class="cursor">_</span>
+      </h1></div>
+    </div>
+
+    <a id="mausouter" class="scroller" href="#gradient">
+      <div class="maus"> </div>
+    </a>
+
+    <div id="white"></div>
+    <video id="videobcg" preload="auto" autoplay="autoplay" loop="loop" muted="muted" >
+      <source src="img/0 2000 3.mp4" type="video/mp4">
+    </video>
+
+    <div id="gradient"></div>
+  </div>
+
+  <div  class="bigboy">
+  <div  class="Container">
+    <div class="outersec">
+      <div class="section" id="section_was">
+          <h2>Was ist BubbleSort?</h2>
+      </div>
+    </div>
+
+    <div class="item" class="itemleft" id="1_1">
+      <p class="textleft">1</p>
+    </div>
+
+    <div class="item"  class="itemright" id="1_2">
+      <p class="textright">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</p>
+    </div>
+    <div class="item"  class="itemleft" id="1_3">
+      <p class="textleft">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+
+      </p>
+    </div>
+    <div class="item"  class="itemright" id="1_4">
+      <p class="textleft">4</p>
+    </div>
+  </div>
+
+    <div class="Container">
+      <div class="outersec">
+        <div class="section" id="section_VorNach">
+          <h2>Vor & Nachteile</h2>
+        </div>
+      </div>
+
+      <div class="item">
+        <p>Text</p>
+      </div>
+
+      <div class="item">
+        <p>Text</p>
+      </div>
+    </div>
+
+      <div class="Container">
+        <div class="outersec">
+          <div class="section" id="section_Funktion">
+            <h2>Wie funktioniert BubbleSort?</h2>
+          </div>
+        </div>
+
+        <div class="item" id="Funktion">
+          <div id="Funkleft">
+            <div class ="BubbleSortVisualisation">
+              <section id="Animation"></section>
+            </div>
+            <div id="buttons" class="buttons">
+              <button id="nextStep">Nächster Schritt</button>
+              <button id="autoplay">Autoplay</button>
+            </div>
+          </div>
+          <div id="Funkright"></div>
+        </div>
+      </div>
+
+    <div class="Container">
+      <div class="outersec">
+        <div class="section" id="section_Demo">
+          <h2>Übung</h2>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="BubbleSortTrainer">
+          <section id="BubblePractice"></section>
+        </div>
+        <div id="Decidebuttons" class="buttons">
+          <button class="btn swap" id="btnSwap">Tauschen</button>
+          <button class="btn dontSwap" id="btnDontSwap">Nicht tauschen</button>
+        </div>
+        <div id="snackbar">Leider falsch. Versuche es noch einmal!</div>
+      </div>
+    </div>
+
+</div>
+<div class="footer">
+
+</div>
+  <script src="js/plugins.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/8782303ce6.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
