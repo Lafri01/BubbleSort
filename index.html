@@ -1,0 +1,252 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>myBubbleSort</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+  <link rel="icon" type="image/png" href="img/Zeichenfläche%201@2x.png";>
+
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <div id="header"  >
+    <div id="headerinside" >
+      <div id="headerleft">
+        <a href="#titback"><img src="img/Zeichenfläche 1@2x.png" alt="Logo" style="height:40px"></a>
+      </div>
+      <nav id="nav">
+        <ul id="navlist">
+          <li class="navitem" id="Was"><a class="navlink1" href="#gradient"> <span>Über</span> </a></li>
+          <li class="navitem" id="Vornach"><a class="navlink1" href="#1_4">Vor & Nachteile</a></li>
+          <li class="navitem" id="funktitel"><a class="navlink1" href="#section_Funktion">Demo</a></li>
+          <li class="navitem" id="Demo" ><a class="navlink1" href="#section_Demo">Übung</a></li>
+        </ul>
+      </nav>
+      <div id="headerright" >
+        <button onclick="showDropdown()" id="burger" class="burger"> <i id="bars" class="fas fa-bars" ></i> </button>
+        </div>
+      </div>
+    </div>
+
+  <div class="popup" id="popup">
+    <ul id="mobilenav">
+      <li class="navitem2" id="Was2"><a class="navlink2" href="#gradient"> <span>Über</span> </a></li>
+      <li class="navitem2" id="Vornach2"><a class="navlink2" href="#1_4">Vor & Nachteile</a></li>
+      <li class="navitem2" id="funktitel2"><a class="navlink2" href="#section_Funktion">Funktion</a></li>
+      <li class="navitem2" id="Demo2" ><a class="navlink2" href="#section_Demo">Übung</a></li>
+    </ul>
+  </div>
+
+  <div id="titback">
+    <div style="position: fixed; z-index: -1" id="Title">
+      <img src="img/Zeichenfläche 1@2x.png" alt="Logo" id="Logo">
+      <div id="Logotext"><h1>
+        <span class="text"></span>
+        <span class="cursor">_</span>
+      </h1></div>
+    </div>
+
+    <a id="mausouter" class="scroller" href="#gradient">
+      <div class="maus"> </div>
+    </a>
+
+    <div id="white"></div>
+    <video id="videobcg" preload="auto" autoplay="autoplay" loop="loop" muted="muted" >
+      <source src="img/0 2000 3.mp4" type="video/mp4">
+    </video>
+
+    <div id="gradient"></div>
+  </div>
+
+  <div  class="bigboy">
+  <div  class="Container">
+    <div class="outersec">
+      <div class="section" id="section_was">
+          <h2>Was ist BubbleSort?</h2>
+      </div>
+    </div>
+
+    <div class="item" class="itemleft" id="1_1">
+      <img src="img/wasserglasBlasen.jpg" alt ="Ein Glas mit Sprudelwasser" class="roundedImage">
+    </div>
+
+    <div class="item"  class="itemright" id="1_2">
+      <div class="textright">
+        <p>BubbleSort ist ein vergleichsbasierter Sortieralgorithmus. Die Liste der Elemente (z.B ein Array) wird immer schrittweise von links nach rechts durchlaufen. Hierbei werden jeweils zwei benachbarte Elemente miteinander verglichen und, wenn nötig, miteinander vertauscht.<br>
+        Wenn man nach aufsteigender Größe sortiert, so steht am Ende eines Durchlaufes bereits das größte Element am Ende der Liste. Dieses Element muss anschließend auch nicht weiter verglichen werden, da es bereits am richtigen Platz der Liste einsortiert ist. Man hat also im nächsten Durchlauf immer ein Element weniger zu sortieren als zuvor. Dieser Ablauf wird dann einfach so oft wiederholt, bis das komplette Array sortiert ist.<br>
+        Der Name „BubbleSort“ kommt daher, dass das größere Element so lange mit den kleineren Elementen getauscht wird, bis es seinen Platz am Ende der Liste erreicht hat. Die Elemente steigen also wie Luftblasen im Wasser auf, bis sie richtig einsortiert sind.<br>
+       Natürlich kann man die Elemente auch absteigend sortieren, in unseren Beispielen beschränken wir uns aber nur auf aufsteigende Reihenfolge.</p>
+      </div>
+    </div>
+    <div class="item"  class="itemleft" id="1_3">
+      <div class="textleft">
+        <p>Algorithmen sind kein Hexenwerk! Wir wollen dir helfen, fit mit BubbleSort zu werden und haben hier noch ein paar Fakten für dich:<br>
+          Die O-Notation wird mit O(n²) angegeben, BubbleSort hat also eine quadratische Laufzeit. Das heißt, dass sie quadratisch mit der Anzahl der Elemente steigt. Dies liegt daran, dass jedes Element oft mit anderen verglichen und gegebenenfalls getauscht werden muss.<br>
+          Der Best Case ist, wenn bereits alle Elemente in der richtigen Reihenfolge stehen. Dann benötigt der Algorithmus O(n) Schritte, weil er nach einem Durchlauf merkt, dass keine Elemente vertauscht werden müssen. Der Worst Case ist, wenn alle Elemente umgekehrt sortiert sind, da dann jedes Element seinen Platz in der Liste tauschen muss.<br>
+          Keine Sorge, wenn du bis jetzt nur Bahnhof verstanden hast. In unserer Demo kannst du dich Schritt für Schritt durch BubbleSort klicken und in der Übung selbst ausprobieren, wie fit du im Umgang mit BubbleSort bist. Dort arbeitest du wie der Algorithmus und entscheidest, ob ein Element getauscht werden muss oder nicht. Viel Spaß beim Lernen!
+        </p>
+      </div>
+    </div>
+    <div class="item"  class="itemright" id="1_4">
+      <img src="img/VergleichBestWorst.jpg" alt ="Best Case und Worst Case im Vergleich" class="roundedImage">
+
+    </div>
+  </div>
+
+    <div class="Container">
+      <div class="outersec">
+        <div class="section" id="section_VorNach">
+          <h2>Vor & Nachteile</h2>
+        </div>
+      </div>
+
+      <div class="item">
+        <ul>
+          <li>Gut geeignet für Listen, die (zum Teil) schon sortiert sind</li>
+          <li>Einfach zu Implementieren</li>
+          <li>Gutes Beispiel, um einen Sortieralgorithmus zu verstehen</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <ul>
+          <li>Sehr hohe Laufzeit</li>
+          <li>Unbrauchbar für große Datensätze</li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="Container">
+        <div class="outersec">
+          <div class="section" id="section_Funktion">
+            <h2>Wie funktioniert BubbleSort?</h2>
+          </div>
+        </div>
+
+        <div class="item" id="Funktion">
+
+          <div id="Funkleft">
+
+            <div class ="BubbleSortVisualisation">
+              <section id="Animation"></section>
+            </div>
+
+            <div id="buttons" class="buttons">
+              <div class="steuerung">
+              <button id="nextStep">Nächster Schritt</button>
+              <button id="autoplay">Autoplay</button>
+              </div>
+              <button class="reload" id="reload1"><i class="fas fa-redo-alt"></i></button>
+            </div>
+          </div>
+
+          <div id="Funkright">
+
+
+            <div id="Funkrighttitle">
+              <h3 >Pseudo-Code</h3>
+            </div>
+            <div id="demoimages">
+              <div  id="vergleich" class="demoimage">
+                <i class="fas fa-search step"></i>
+                <p class="steptext">Vergleichen</p>
+              </div>
+              <div id="tauschen" class="demoimage">
+                <i  class="fas fa-random step"></i>
+                <p class="steptext">Tauschen</p>
+              </div>
+              <div id="fertig" class="demoimage">
+                <i  class="fas fa-trophy" id="fertig2"></i>
+                <p class="steptext" id="fertig3">Fertig</p>
+              </div>
+            </div>
+
+            <div class="pseudoCode">
+                <code>
+<pre id="topCode">
+ laenge = array.laenge;
+</pre>
+
+                  <div id="vergleichCode">
+<pre>
+  for (i = 0; i <= laenge; i++){
+    for (j = 0; j<= laenge-j; j++{
+</pre>            </div>
+
+                  <div id="tauschCode">
+<pre>
+      if (zahl[j] >  zahl[j+1]){
+        temp = array[j];
+        array[j] = array[j+1];
+        array[j+1] = temp;
+      }
+</pre>            </div>
+
+                  <div id="vergleichCode2">
+<pre>
+    }
+  }
+</pre>            </div>
+
+
+                </pre></code>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div class="Container">
+      <div class="outersec">
+        <div class="section" id="section_Demo">
+          <h2>Übung</h2>
+        </div>
+      </div>
+
+      <div class="item" id="Uebung">
+
+        <div class="BubbleSortTrainer">
+          <section id="BubblePractice"></section>
+        </div>
+
+        <div id="Decidebuttons" class="buttons">
+
+          <div class="steuerung" >
+          <button class="btn swap" id="btnSwap">Tauschen</button>
+          <button class="btn dontSwap" id="btnDontSwap">Nicht tauschen</button>
+          </div>
+          <button class="reload" id="reload2"><i class="fas fa-redo-alt"></i></button>
+        </div>
+
+        <div id="snackbar">Leider falsch. Versuche es noch einmal!</div>
+      </div>
+    </div>
+
+</div>
+<div class="footer">
+
+</div>
+
+
+
+  <script src="js/plugins.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/8782303ce6.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
