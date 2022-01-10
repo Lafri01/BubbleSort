@@ -23,6 +23,7 @@ html {
  */
 button{
   border: none;
+  font-family: Calibri, sans-serif;
 }
 body {
   margin: 0;
@@ -71,7 +72,7 @@ h2{
   display: flex;
   justify-content: stretch;
   border-radius: 20px;
-  box-shadow: 2px 0px 5px 2px rgba(0,0,0,0.05);
+  box-shadow: 2px 0 5px 2px rgba(0,0,0,0.05);
   background: white;
 }
 
@@ -175,8 +176,6 @@ h2{
   top: 3%;
   z-index:99;
   right: 6%;
-
-
 }
 .popup{
   background: #F8F9FB;
@@ -269,7 +268,7 @@ h2{
   background: rgb(2,0,36);
   background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(248,249,251,1) 75%);
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   display: flex;
   justify-content: center;
 }
@@ -306,7 +305,7 @@ h2{
   flex-wrap: wrap;
   justify-content: center;
   height: auto;
-  padding: 0px 20px 100px 20px;
+  padding: 0 20px 100px 20px;
 }
 
 .item{
@@ -319,7 +318,6 @@ h2{
   border-radius: 20px;
   box-shadow: 2px 2px 15px rgb(0,0,0,0.05);
   background-color: white;
-  padding: 10px;
 }
 
 .section{
@@ -336,7 +334,7 @@ h2{
 }
 
 .outersec{
-  padding: 0px 30px 0px 30px;
+  padding: 0 30px 0 30px;
   flex-basis: 99%;
   flex-grow: 0;
   flex-shrink: 0;
@@ -345,18 +343,39 @@ h2{
 
 .itemleft{
   display: flex;
-  justify-content: flex-end;
-  text-align: end;
+  justify-content: center;
+  text-align: center;
 }
 
 .textleft{
+  display: flex;
   text-align: center;
+  justify-content: center;
   width: 100%;
 }
 
-.textright{
-  text-align: center;
+img.roundedImage{
+  border-radius: 20px;
+  height: 415px;
   width: 100%;
+  object-fit: cover;
+
+}
+
+.textright{
+  text-align: justify;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
+}
+
+.textleft{
+  text-align: justify;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
 }
 
 #mausouter{
@@ -503,6 +522,75 @@ section#Animation div {
   border-radius: 0 20px 20px 0;
 }
 
+#Funkrighttitle {
+  width: 100%;
+  background: #83B0E1;
+  color: white;
+  height: auto;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  border-radius: 0 20px 0 0;
+  text-align: center;
+}
+#Funkrighttitle h3{
+  margin: 0;
+}
+#demoimages{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.demoimage{
+  flex-basis: 33%;
+  flex-grow: 1;
+  height: 50%;
+  padding: 10px;
+  opacity: 10%;
+}
+.step{
+  color: white;
+  font-size: 3em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.steptext{
+  height: 20%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+#fertig2{
+  color: white;
+  font-size: 3em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.pseudoCode{
+  display: flex;
+  line-height: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+#vergleichCode{
+  opacity: 40%
+}
+#tauschCode{
+  opacity: 40%
+}
+#vergleichCode2{
+  opacity: 40%
+}
+#topCode{
+  opacity:40%
+}
+
+
 .BubbleSortTrainer{
   display: flex;
   flex-direction: row;
@@ -542,7 +630,6 @@ section#BubblePractice div {
   padding-top: 5px;
   color: white;
   font-size: 1.2em;
-  font-family: "Roboto Thin";
 }
 
 .buttons{
@@ -590,7 +677,7 @@ section#BubblePractice div {
   justify-self: flex-end;
   border-radius: 20px;
   color: white;
-  font-family: Calibri, sans-serif;
+
   margin-left: 10px;
 }
 
@@ -679,14 +766,6 @@ section#BubblePractice div {
 
 
 
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 678px) {
   /* For mobile phones: */
   .item{
@@ -742,7 +821,8 @@ section#BubblePractice div {
   #Funkright{
     flex-basis: 100%;
     border-radius: 0 0 20px 20px;
-    height: 300px;
+  }
+
   }
   #nextStep {
     height: 50px;
@@ -764,4 +844,4 @@ section#BubblePractice div {
     border-radius: 0;
   }
 
-}
+

@@ -16,6 +16,16 @@ let tlStart = gsap.timeline();
 let thisDiv, nextDiv = null;
 let BubblePractice = document.getElementById("BubblePractice");
 let choice = 0;
+let vergleichen;
+let tauschen;
+let fertig;
+let fertig2;
+let fertig3;
+let vergleichCode;
+let vergleichCode2;
+let tauschCode;
+let topCode;
+
 
 window.addEventListener('DOMContentLoaded', () => {
   init();
@@ -62,17 +72,16 @@ btnDontSwap.addEventListener("click", function () {
   }
 })
 
-/*
-let btnReload1 = document.getElementById("btnReload1");
+
+let btnReload1 = document.getElementById("reload1");
 btnReload1.addEventListener("click",function(){
   window.location.reload();
 })
-let btnReload2 = document.getElementById("btnReload2");
+let btnReload2 = document.getElementById("reload2");
 btnReload2.addEventListener("click",function(){
   window.location.reload();
 })
 
- */
 
 function init(){
   drawRandomBars(animation);
@@ -134,27 +143,63 @@ function decide(area) {
   nextBar = randomArray[barCounter + 1];
   thisDiv = bars[barCounter];
   nextDiv = bars[barCounter + 1];
+  vergleichen = document.getElementById("vergleich");
+  fertig = document.getElementById("fertig");
+  fertig2 = document.getElementById("fertig2");
+  fertig3 =document.getElementById("fertig3");
+  tauschen = document.getElementById("tauschen");
+  vergleichCode = document.getElementById("vergleichCode");
+  vergleichCode2 = document.getElementById("vergleichCode2");
+  tauschCode = document.getElementById("tauschCode");
+  topCode = document.getElementById("topCode");
+
   if (lastIndex === 0) {
+    fertig.style.opacity = 1;
+    fertig2.style.color= "#ffb703";
+    fertig3.style.color= "#ffb703";
+    vergleichCode.style.opacity = 1;
+    vergleichCode2.style.opacity = 1;
+    tauschCode.style.opacity = 1;
+    topCode.style.opacity = 1;
     tlAnimation.pause();
   }
   if (thisBar > nextBar) {
+   // document.getElementById("vergleich").style.opacity=1;
+    //document.getElementById("tauschen").style.opacity=0.1;
     const temp = randomArray[barCounter]
     randomArray[barCounter] = randomArray[barCounter + 1]
     randomArray[barCounter + 1] = temp
     tlAnimation
-        .to(nextDiv, {backgroundColor: '#FEA82F'})
+        .to(vergleichen, {opacity: 1})
+        .to(vergleichCode, {opacity:1},"<")
+        .to(vergleichCode2, {opacity:1},"<")
+        .to(nextDiv, {backgroundColor: '#FEA82F'},"<")
         .to(thisDiv, {backgroundColor: '#FEA82F'}, "<")
         .to(nextDiv, {scale: 0, transformOrigin: "bottom center", duration: 0.5, ease: "circ.out"}, ">1")
         .to(thisDiv, {scale: 0, transformOrigin: "bottom center", duration: 0.8, ease: "circ.out"}, '<')
+        .to(tauschen, {opacity:1},"<")
+        .to(tauschCode,{opacity:1},"<")
+        .to(vergleichen, {opacity: 0.1},"<")
+        .to(vergleichCode,{opacity: 0.4},"<")
+        .to(vergleichCode2,{opacity: 0.4},"<")
         .call(swapBars, [thisDiv, nextDiv], ">0.5")
         .to(nextDiv, {duration: 0.5,scale: 1,transformOrigin: "bottom center",backgroundColor: "",ease: "circ.out"}, ">")
         .to(thisDiv, { duration: 0.5,scale: 1,transformOrigin: "bottom center",backgroundColor: "",ease: "circ.out"}, "<")
+        .to(tauschen, {opacity:0.1},">")
+        .to(tauschCode, {opacity: 0.4},"<")
   } else {
     tlAnimation
+        .to(vergleichen, {opacity: 1})
+        .to(vergleichCode,{opacity: 1},"<")
+        .to(vergleichCode2,{opacity: 1},"<")
         .to(thisDiv, {backgroundColor: '#FEA82F'})
         .to(nextDiv, {backgroundColor: '#FEA82F'}, "<")
         .set(thisDiv, {backgroundColor: ''}, ">1")
         .set(nextDiv, {backgroundColor: ''}, "<")
+        .to(vergleichen, {opacity:0.1},">")
+        .to(vergleichCode,{opacity: 0.4},"<")
+        .to(vergleichCode2,{opacity: 0.4},"<")
+
   }
   if (barCounter < lastIndex) {
     barCounter++;
@@ -238,13 +283,26 @@ window.onclick = function(event) {
   }
 }
 
-const titles = ["Sorting those Bubbles!", "if zahl[k] >  zahl[k+1]", "Bubbles!!!!", "O(n^2)", "I like Bubbles :)", "Du musst runter scrollen!", ":)", "Hello World!"]
+$(document).ready(function (){
+  $(window).scroll(function() {
+    if ($(this).scrollTop()>10)
+    {
+      $('.scroller').fadeOut();
+    }
+    else
+    {
+      $('.scroller').fadeIn();
+    }
+  });
+})
+
+const titles = ["Sorting those Bubbles!", "if zahl[k] >  zahl[k+1]","swap (zahl[k], zahl[k+1])", "Bubbles!!!!", "O(n^2)", "I like Bubbles :)", "Du musst runter scrollen!", ":)", "Hello World!","console.log (\"unsere User sind die besten!\");","O(g(n)) := {f(n)∃k>0, n0:∀n ≥n0:f(n)≤k∙g(n)}","Algorithmen machen Spaß!","Sortieren, Whohooo!","function sort(randomArray);","Swap it like it's hot!","Vergleichsbasiertes Sortieren"]
  let  cursor = gsap.to(".cursor",{opacity:0, ease: "power2.inOut", repeat: -1})
 
 let masterTl = gsap.timeline({repeat: -1})
 
 titles.forEach(word => {
-  let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay:1})
+  let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay:3})
   tl.to('.text', {duration: 1, text: word})
   masterTl.add(tl)
 })
