@@ -98,7 +98,7 @@
       </div>
     </div>
     <div class="item"  class="itemright" id="1_4">
-      <img src="img/VergleichBestWorst.jpg" alt ="Best Case und Worst Case im Vergleich" class="roundedImage">
+      <img src="img/VergleichBestWorst.jpg" alt ="Best Case und Worst Case im Vergleich" id="bestWorst" class="roundedImage">
 
     </div>
   </div>
@@ -110,7 +110,8 @@
         </div>
       </div>
 
-      <div class="item">
+      <div class="item" id="Vorteil">
+        <h3 class="VN_Title" id="V_Title">Vorteile</h3>
         <ul>
           <li>Gut geeignet für Listen, die (zum Teil) schon sortiert sind</li>
           <li>Einfach zu Implementieren</li>
@@ -118,7 +119,8 @@
         </ul>
       </div>
 
-      <div class="item">
+      <div class="item" id="Nachteil">
+        <h3 class="VN_Title" id="N_Title">Nachteile</h3>
         <ul>
           <li>Sehr hohe Laufzeit</li>
           <li>Unbrauchbar für große Datensätze</li>
@@ -175,17 +177,13 @@
                 <code>
 <pre id="topCode">
  laenge = array.laenge;
-</pre>
-
+  for (i = 0; i <= laenge; i++){
+    for (j = 0; j<= laenge-j; j++{</pre>
                   <div id="vergleichCode">
 <pre>
-  for (i = 0; i <= laenge; i++){
-    for (j = 0; j<= laenge-j; j++{
-</pre>            </div>
-
+      if (zahl[j] >  zahl[j+1]){</pre>            </div>
                   <div id="tauschCode">
 <pre>
-      if (zahl[j] >  zahl[j+1]){
         temp = array[j];
         array[j] = array[j+1];
         array[j+1] = temp;
@@ -230,13 +228,26 @@
           <button class="reload" id="reload2"><i class="fas fa-redo-alt"></i></button>
         </div>
 
-        <div id="snackbar">Leider falsch. Versuche es noch einmal!</div>
+
       </div>
     </div>
 
 </div>
 <div class="footer">
+  <div id="Kontakt" class="footerlink">
+    <a href="#Kontakt">Kontakt</a>
+  </div>
+  <div id="Impressum" class="footerlink">
+    <a href="#Impressum">Impressum</a>
+  </div>
+  <div id="Datenschutz" class="footerlink">
+    <a href="#Datenschutz">Datenschutz</a>
+  </div>
+  <div id="AGB" class="footerlink">
+    <a href="#AGB">AGB</a>
+  </div>
 
+  <div id="snackbar">Leider falsch. Versuche es noch einmal!</div>
 </div>
 
 

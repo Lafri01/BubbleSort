@@ -639,6 +639,7 @@ section#BubblePractice div {
   justify-content: space-between;
   padding: 10px 0 10px 0;
   background: #83B0E1;
+  border-radius: 0 0 0 20px;
 }
 #buttons{
   border-radius: 0 0 0 20px;
@@ -722,7 +723,7 @@ section#BubblePractice div {
   border-radius: 8px; /* Rounded borders */
   padding: 16px; /* Padding */
   position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
+  z-index: 999; /* Add a z-index if needed */
   left: 50%; /* Center the snackbar */
   bottom: 30px; /* 30px from the bottom */
 }
@@ -753,6 +754,30 @@ section#BubblePractice div {
   width: 100%;
   background: #555555;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footerlink{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+}
+
+.footerlink a{
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+.footerlink a:hover{
+  font-size: 1.4em;
+  color: #FEA82F;
+  text-decoration: white;
 }
 
 #Uebung{
@@ -760,88 +785,144 @@ section#BubblePractice div {
   flex-direction: column;
   padding: 0;
 }
+#bestWorst{
+  object-fit: contain;
+}
 
-
-
+#Vorteil{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#Nachteil{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.VN_Title{
+  margin: 0;
+  width: 100%;
+  background: #83B0E1;
+  border-radius: 20px 20px 0 0;
+  color: white;
+  text-align: center;
+}
 
 
 
 @media only screen and (max-width: 678px) {
   /* For mobile phones: */
-  .item{
+  .item {
     flex-basis: 100%;
     width: 100%;
   }
-  .bigboy{
-    padding-left: 10%;
-    padding-right: 10%;
+
+  .bigboy {
+    padding-left: 5%;
+    padding-right: 5%;
   }
+
   #headerinside {
     height: 100%;
     width: 100%;
     border-radius: 0;
   }
-  #Title{
+
+  #Title {
     width: 100vw;
   }
-  #Logotext{
+
+  #Logotext {
     font-size: 0.6em;
-    padding:0 10px 0 10px;
+    padding: 0 10px 0 10px;
   }
-  #header{
+
+  #header {
     height: 8%;
   }
-  #nav{
+
+  #nav {
     display: none;
   }
-  #menu{
+
+  #menu {
     display: flex;
   }
-  #burger{
+
+  #burger {
     display: flex;
   }
-  #headerleft{
+
+  #headerleft {
     padding-left: 25px;
   }
-  #headerright{
+
+  #headerright {
     display: flex;
   }
-  #Funktion{
+
+  #Funktion {
     flex-wrap: wrap;
     height: auto;
   }
-  .BubbleSortVisualisation{
-    padding: 0 5px 0 5px;
+
+  .BubbleSortVisualisation {
+    padding: 60px 5px 0 5px;
+    height: 60%;
   }
-  #Funkleft{
+
+  #Funkleft {
     flex-basis: 100%;
     border-radius: 20px 20px 0 0;
     height: 400px;
   }
-  #Funkright{
+
+  #Funkright {
     flex-basis: 100%;
     border-radius: 0 0 20px 20px;
   }
 
-  }
-  #nextStep {
-    height: 50px;
-  }
-  #autoplay{
-    height: 50px;
-  }
-  .BubbleSortTrainer{
-    padding: 50px 0 10px 0;
-    width: 95%;
-  }
-  #btnSwap{
-    height: 50px;
-  }
-  #btnDontSwap{
-    height: 50px;
-  }
-  #buttons{
+  #Funkrighttitle {
     border-radius: 0;
   }
 
+  .footerlink {
+
+  }
+
+  .steuerung {
+    padding-left: 0;
+  }
+
+  #nextStep {
+    height: 50px;
+    width: 90px;
+  }
+
+  #autoplay {
+    height: 50px;
+    width: 90px;
+  }
+
+  .BubbleSortTrainer {
+    padding: 50px 0 10px 0;
+    width: 95%;
+  }
+
+  #btnSwap {
+    height: 50px;
+    margin-left: 10px;
+    width: 90px;
+  }
+
+  #btnDontSwap {
+    height: 50px;
+    margin-right: 10px;
+    width: 90px;
+  }
+
+  #buttons {
+    border-radius: 0;
+  }
+}
 
