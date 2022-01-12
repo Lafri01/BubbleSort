@@ -124,7 +124,7 @@ h2{
   color: #262829;
 }
 
-.navitem#Demo a {
+.navitem#Uebung a {
   border-radius: 0 20px 20px 0;
 }
 
@@ -215,7 +215,7 @@ h2{
   font-size: 1.2em;
   padding: 20px;
 }
-.navitem2#Demo2 a {
+.navitem2#Uebung2 a {
   border-radius:  0 0 0 20px;
 }
 
@@ -454,8 +454,50 @@ img.roundedImage{
   align-items: stretch;
   align-content: stretch;
   padding: 0;
-  height: 500px;
 }
+#Ablauf{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+#Ablauf .item{
+  flex-basis: 20%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: space-between;
+  text-align: center;
+}
+.ablaufdesc{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 0 10px 0 10px;
+}
+.ablaufbild{
+  color: #83B0E1;
+  font-size: 4em;
+
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#Ablauf .item p{
+  margin-top: 0.8em;
+  margin-bottom: 0;
+}
+.codesnip{
+  background: #666869;
+  padding: 15px 0 15px 0;
+  margin-top: 0.8em;
+  border-radius: 0 0 20px 20px;
+  color: white;
+  width: 100%;
+}
+
 
 #Funkleft{
   flex-basis: 50%;
@@ -589,6 +631,9 @@ section#Animation div {
 #topCode{
   opacity:40%
 }
+#bottomCode{
+  opacity: 40%;
+}
 
 
 .BubbleSortTrainer{
@@ -598,7 +643,7 @@ section#Animation div {
   align-items: stretch;
   position: relative;
   flex-wrap: nowrap;
-  height: 500px;
+  height: 300px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -780,7 +825,7 @@ section#BubblePractice div {
   text-decoration: white;
 }
 
-#Uebung{
+#Uebung1{
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -807,10 +852,65 @@ section#BubblePractice div {
   color: white;
   text-align: center;
 }
+#N_Title{
+  background: #ff6b6b;
+}
+#V_Title{
+  background: #87c38f;
+}
 
 
+@media only screen and (max-width: 1183px) {
+  /* for tablets */
+  .item {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  #Title {
+    width: 50vw;
+  }
+#headerinside{
+  width: 90%;
+}
+#gradient{
+  height: 400px;
+}
+  #Logotext {
+    font-size: 0.6em;
+    padding: 0 10px 0 10px;
+  }
 
-@media only screen and (max-width: 678px) {
+  .bigboy {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #nextStep {
+    height: 50px;
+    width: 90px;
+  }
+
+  #autoplay {
+    height: 50px;
+    width: 90px;
+  }
+  #btnSwap {
+    height: 50px;
+    margin-left: 10px;
+    width: 90px;
+  }
+
+  #btnDontSwap {
+    height: 50px;
+    margin-right: 10px;
+    width: 90px;
+  }
+  #Ablauf .item {
+    flex-basis: 45%;
+    flex-grow: 1;
+  }
+
+}
+@media only screen and (max-width: 700px) {
   /* For mobile phones: */
   .item {
     flex-basis: 100%;
@@ -884,6 +984,8 @@ section#BubblePractice div {
 
   #Funkrighttitle {
     border-radius: 0;
+    border: none;
+
   }
 
   .footerlink {
@@ -924,5 +1026,20 @@ section#BubblePractice div {
   #buttons {
     border-radius: 0;
   }
+  #Ablauf{
+    width: 100%;
+
+
+  }
+  #Ablauf .item {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .footerlink{
+    font-size: 0.7em;
+  }
 }
+
+
+
 

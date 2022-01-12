@@ -28,8 +28,9 @@
         <ul id="navlist">
           <li class="navitem" id="Was"><a class="navlink1" href="#gradient"> <span>Über</span> </a></li>
           <li class="navitem" id="Vornach"><a class="navlink1" href="#1_4">Vor & Nachteile</a></li>
-          <li class="navitem" id="funktitel"><a class="navlink1" href="#section_Funktion">Demo</a></li>
-          <li class="navitem" id="Demo" ><a class="navlink1" href="#section_Demo">Übung</a></li>
+          <li class="navitem" id="funktitel"><a class="navlink1" href="#V_Title">Funktionsweise</a></li>
+          <li class="navitem" id="Demo"><a class="navlink1" href="#Funktion_end">Demo</a></li>
+          <li class="navitem" id="Uebung" ><a class="navlink1" href="#autoplay">Übung</a></li>
         </ul>
       </nav>
       <div id="headerright" >
@@ -42,8 +43,9 @@
     <ul id="mobilenav">
       <li class="navitem2" id="Was2"><a class="navlink2" href="#gradient"> <span>Über</span> </a></li>
       <li class="navitem2" id="Vornach2"><a class="navlink2" href="#1_4">Vor & Nachteile</a></li>
-      <li class="navitem2" id="funktitel2"><a class="navlink2" href="#section_Funktion">Funktion</a></li>
-      <li class="navitem2" id="Demo2" ><a class="navlink2" href="#section_Demo">Übung</a></li>
+      <li class="navitem2" id="funktitel2"><a class="navlink2" href="#V_Title">Funktion</a></li>
+      <li class="navitem2" id="Demo2"><a class="navlink2" href="#Funktion_end">Demo</a></li>
+      <li class="navitem2" id="Uebung2" ><a class="navlink2" href="#bottomCode">Übung</a></li>
     </ul>
   </div>
 
@@ -62,7 +64,7 @@
 
     <div id="white"></div>
     <video id="videobcg" preload="auto" autoplay="autoplay" loop="loop" muted="muted" >
-      <source src="img/0 2000 3.mp4" type="video/mp4">
+      <source src="img/0-2000-3.webm" type="video/webm">
     </video>
 
     <div id="gradient"></div>
@@ -134,9 +136,69 @@
             <h2>Wie funktioniert BubbleSort?</h2>
           </div>
         </div>
+        <div class="Container" id="Ablauf">
+          <div class="item">
+            <div class="ablaufdesc">
+            <h3>1</h3>
+            <div style="display: flex; flex-direction: row; justify-content: center; width: 100%; ">
+              <i class="fas fa-ruler-vertical ablaufbild"></i>
+              <i class="fas fa-layer-group ablaufbild"></i>
+            </div>
+              <p>Am Anfang muss definiert werden wie der Algorithmus das Array durchlaufen soll. Dies wird mit zwei verschachtelten for-Schleifen getan. </p>
+              <p>Als Länge der äußeren for-Schleife wird die Länge <i>n</i> des Arrays angegeben.</p>
+              <p>Die Länge der inneren for-Schleife ist die Länge <i>n</i> minus des counters der äußeren for-Schleife <i>i</i>.</p>
 
+            </div>
+              <i class="codesnip"> laenge = array.laenge;
+              </br>for (i = 0; i <= laenge; i++){
+              </br>for (j = 0; j<= laenge-i; j++{</i>
+          </div>
+          <div class="item">
+            <div class="ablaufdesc">
+              <h3>2</h3>
+              <i class="fas fa-search ablaufbild"></i>
+              <p>Nun durchläuft der Algorithmus das Array Feld für Feld.</p>
+              <p>Der Algorithmus wählt ein Element aus und vergleicht es mit dem dahinterliegendem.</p>
+              <p>Wenn das aktuell betrachtete Feld <i>[j]</i> kleiner ist als das darauffolgende <i>[j+1]</i>, dann werden diese beiden Felder getauscht</p>
+          </div>
+            <i class="codesnip">if (zahl[j] >  zahl[j+1]){</i>
+          </div>
+          <div class="item">
+            <div class="ablaufdesc">
+            <h3>3</h3>
+            <i class="fas fa-random ablaufbild"></i>
+                        <p>Hierzu wird das Feld <i>[j]</i> in eine temporäre Variable <i>temp</i> gespeichert,</br></br>der Feldwert von <i>[j]</i> wird mit dem Feldwert von <i>[j+1]</i> ersetzt</br></br> und schließlich wird der Feldwert von <i>[j+1]</i> mit dem Inhalt von <i>temp</i> ersetzt</p>
+            </div>
+              <i class="codesnip">temp = array[j];
+              </br>array[j] = array[j+1];
+              </br>array[j+1] = temp;</i>
+          </div>
+          <div class="item">
+            <div class="ablaufdesc">
+              <h3>4</h3>
+              <i class="fas fa-sync-alt ablaufbild"></i>
+              <p>nun werden nach und nach alle Elemente durchlaufen, bis der Algorithmus am Ende des Arrays ankommt.</p>
+              <p>Nun steht der größte Wert ganz hinten, er muss also im nächsten Durchlauf nicht verglichen werden.</p>
+              <p>Dieser Durchlauf wird nun so lange wiederholt bis alle Felder im Array einsortiert sind</p>
+
+            </div>
+            <i class="codesnip" id="Funktion_end">
+              } } }</i>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    <div class="Container">
+      <div class="outersec">
+        <div class="section" id="section_Demo">
+          <h2>Demo</h2>
+        </div>
+      </div>
         <div class="item" id="Funktion">
-
           <div id="Funkleft">
 
             <div class ="BubbleSortVisualisation">
@@ -178,7 +240,7 @@
 <pre id="topCode">
  laenge = array.laenge;
   for (i = 0; i <= laenge; i++){
-    for (j = 0; j<= laenge-j; j++{</pre>
+    for (j = 0; j<= laenge-i; j++{</pre>
                   <div id="vergleichCode">
 <pre>
       if (zahl[j] >  zahl[j+1]){</pre>            </div>
@@ -187,15 +249,15 @@
         temp = array[j];
         array[j] = array[j+1];
         array[j+1] = temp;
-      }
 </pre>            </div>
 
                   <div id="vergleichCode2">
 <pre>
+      }
+</pre>            </div>
+ <pre id="bottomCode">
     }
   }
-</pre>            </div>
-
 
                 </pre></code>
 
@@ -208,12 +270,12 @@
 
     <div class="Container">
       <div class="outersec">
-        <div class="section" id="section_Demo">
+        <div class="section" id="section_Uebung">
           <h2>Übung</h2>
         </div>
       </div>
 
-      <div class="item" id="Uebung">
+      <div class="item" id="Uebung1">
 
         <div class="BubbleSortTrainer">
           <section id="BubblePractice"></section>
