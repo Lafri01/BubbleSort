@@ -363,7 +363,7 @@ img.roundedImage{
 }
 
 .textright{
-  text-align: justify;
+  text-align: left;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -371,7 +371,7 @@ img.roundedImage{
 }
 
 .textleft{
-  text-align: justify;
+  text-align: left;
   width: 100%;
   display: flex;
   flex-direction: column;

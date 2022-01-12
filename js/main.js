@@ -25,6 +25,7 @@ let vergleichCode;
 let vergleichCode2;
 let tauschCode;
 let topCode;
+let bottomCode;
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -152,6 +153,7 @@ function decide(area) {
   vergleichCode2 = document.getElementById("vergleichCode2");
   tauschCode = document.getElementById("tauschCode");
   topCode = document.getElementById("topCode");
+  bottomCode = document.getElementById("bottomCode");
 
   if (lastIndex === 0) {
     fertig.style.opacity = 1;
@@ -161,6 +163,7 @@ function decide(area) {
     vergleichCode2.style.opacity = 1;
     tauschCode.style.opacity = 1;
     topCode.style.opacity = 1;
+    bottomCode.style.opacity = 1;
     tlAnimation.pause();
   }
   if (thisBar > nextBar) {
